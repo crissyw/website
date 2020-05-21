@@ -19,6 +19,12 @@ body {
     overflow-x:auto;
 }
 
-ul.navbar-nav {
+ul.nav {
     display:inline-flex;
 }
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float:none;
+    vertical-align: top;
+}    
