@@ -40,6 +40,7 @@ def work():
 			'url': 'https://www.youtube.com/watch?v=WRUSryfaxhk',
 			'file_path':'/static/images/portfolio/youtube-tia-sg-2018.jpg'},
 		'Forbes Indonesia: 30Under30': {'url': 'https://www.instagram.com/p/BuTKjF0BSX6/', 'file_path':'/static/images/portfolio/forbes30under30.png'},
+		'General Electric: Women in STEM': {'url': 'https://www.ge.com/reports/56858-2/', 'file_path':'/static/images/portfolio/ge-womeninstem.png'},
 		'My Personal OKRs': {'url': 'https://medium.com/life-at-go-jek/personal-okrs-b10585010361', 'file_path':'/static/images/portfolio/medium-personal-okrs.jpeg'},
 		'Globe Asia: A Passion for Big Data': {'url': 'https://www.globeasia.com/cover-story/a-passion-for-big-data/', 'file_path':'/static/images/portfolio/globeasia.jpg'},
 		'Gojek x Data Science Weekend': {'url': 'https://www.youtube.com/watch?v=mEzHlzPeFSw', 'file_path':'/static/images/portfolio/gojek-dsw.jpg'},
@@ -48,7 +49,9 @@ def work():
 		'North Star Metrics': {'url': 'https://www.youtube.com/watch?v=WOcxmEWqI0c', 'file_path':'/static/images/portfolio/nsm.jpg'},
 		'KrAsia: Women In Tech': {'url': 'https://kr-asia.com/crystal-widjaja-on-gojeks-growth-and-gender-diversity-in-it-women-in-tech', 'file_path':'/static/images/portfolio/krasia.jpeg'},
 		'e27: Delivering 3M Martabaks in a Year': {'url': 'https://e27.co/go-jek-uses-data-business-intelligence-20170905/', 'file_path':'/static/images/portfolio/e27.jpg'},
-		'Angin Spotlight': {'url': 'https://www.angin.id/2018/04/12/crystal-widjaja', 'file_path':'/static/images/portfolio/angin.jpg'}
+		'Angin Spotlight': {'url': 'https://www.angin.id/2018/04/12/crystal-widjaja', 'file_path':'/static/images/portfolio/angin.jpg'},
+		'Metabase Case Study': {'url': 'https://www.metabase.com/case_studies/go-jek/', 'file_path':'/static/images/portfolio/metabase.png'},
+		'Go-Fast: The Data Behind Ramadan': {'url': 'https://blog.gojekengineering.com/go-fast-the-data-behind-ramadan-38037953561b', 'file_path':'/static/images/portfolio/gofast.jpeg'}
 		}
 	return render_template('work.html', work_content=work_content)
 
