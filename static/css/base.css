@@ -4,28 +4,21 @@ body {
     font-family: 'Catamaran', sans-serif;
 }
 
-.navbar-ref {
+.nav-link {
   color: #333232;
   font-family: 'Lato', sans-serif;
   font-size: 16px;
 }
 
-.navbar-ul {
-    background-color: #f5f5f5;
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-}
-
-.list-inline {
-  display: flex;
-  text-decoration: none;
-  justify-content: space-around;
-  margin: 10px;
-  width: 30%;
-}
-
 .active,
-.navbar-ref:hover {
+.nav-link:hover {
     color: black;
+}
+
+.min-width { 
+    overflow-x:auto;
+}
+
+ul.navbar-nav {
+    display:inline-flex;
 }
