@@ -1,1 +1,1 @@
-web: gunicorn run:crissyw
+web: gunicorn app:crissyw
