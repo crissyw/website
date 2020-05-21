@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crystal Widjaja's Portfolio">
+
+    <title>Crystal Widjaja</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <!-- Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Catamaran|Roboto+Condensed" rel="stylesheet" type="text/css" />
+
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div class="navbar-ul">
+        <ul id="navbar-list" class="list-inline">
+            <li><a class="navbar-ref" href="/">home</a></li>
+            <li><a class="navbar-ref" href="/about">about</a></li>
+            <li><a class="navbar-ref" href="/work">work</a></li>
+            <li><a class="navbar-ref" href="https://www.generationgirl.org/">generation girl</a></li>
+        </ul>
+    </div>
+    {% block body %}{% endblock %}
+</body>
+</html>

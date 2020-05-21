@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block head %}
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
+<!-- Not sure I'll need Popper but here for now -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+<!-- Need to figure out the url_fors -->
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename = 'css/home.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/home.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <div class="banner-text ml-5">
+        <h1 class="display-1 font-weight-bold font-italic">Crystal Widjaja</h1>
+        <!-- Loopy loopy through some adjectives I like... check the JS -->
+        <div id="about-me">
+            A passionate <span>startup builder</span>
+        </div>
+        <div class="social-icons d-flex mt-3">
+            <a target="_blank" href="https://github.com/crissyw">
+                <img class="icon-logo" src="static/images/github.svg">
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/crystalwidjaja/">
+                <img class="icon-logo" src="static/images/linkedin.svg">
+            </a>
+            <a target="_blank" href="https://twitter.com/crystalwidjaja">
+                <img class="icon-logo" src="static/images/twitter.svg">
+            </a>
+            <a target="_blank" href="https://medium.com/@crystalwidjaja/">
+                <img class="icon-logo" src="static/images/medium.svg">
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

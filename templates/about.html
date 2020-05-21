@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block head %}
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!-- Not sure I'll need Popper but here for now -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+<!-- Need to figure out the url_fors -->
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename = 'css/home.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/home.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<section class="about-me text-center">
+    <div class="container">
+        <div class="col-md-6 mt-5">
+            <h1 class="about-me-title font-weight-bold my-3">hi, i'm crystal</h1>
+            <p class="about-text">(I also go by Crissy sometimes.)
+                <br><br>I enjoy hacking things together and coming up with creative ways to build and get things done. I especially like if a project is heavily influenced by data.
+                <br><br>Between 2015 and 2020, I was lucky enough to be a part of <a href="https://en.wikipedia.org/wiki/Gojek"
+                    class="text-muted">gojek</a>, where I built the Data and Growth product/eng teams. I also set up the Fraud & Risk team while PMing our internal portals, clickstream service, and helping out with org building.
+                <br><br>
+                These days I'm dabbling in a bit of angel investing through <a
+                    href="https://techcrunch.com/2019/06/07/a-peek-inside-sequoia-capitals-low-flying-wide-reaching-scout-program/"
+                    class="text-muted">Sequoia's Scout fund</a>, experimenting with a few projects, and thinking about what to do next.
+            </p>
+            <div class="row justify-content-between">
+                <!-- item 1 -->
+                <div class="col-lg-5">
+                    <div class="about-me-columns mx-auto my-5 mb-lg-3">
+                        <h4>TOOLS</h4>
+                        <p class="mb-0">SQL<br>Python<br>R<br>HTML/CSS</p>
+                    </div>
+                </div>
+                <!-- item 2 -->
+                <div class="col-lg-5">
+                    <div class="about-me-columns mx-auto my-5 mb-lg-3">
+                        <h4>interests</h4>
+                        <p class="mb-0">Consumer Apps<br>HealthTech<br>O2O Marketplaces</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
