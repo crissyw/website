@@ -1,1 +1,1 @@
-web: gunicorn app:crissyw
+web: gunicorn --bind 0.0.0.0:$PORT app:crissyw
