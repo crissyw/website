@@ -12,6 +12,16 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Catamaran|Roboto+Condensed" rel="stylesheet" type="text/css" />
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167313514-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-167313514-1');
+    </script>
+
     {% block head %}{% endblock %}
 </head>
 <body>
@@ -20,7 +30,7 @@
             <li class="nav-item"><a class="nav-link" href="/">home</a></li>
             <li class="nav-item"><a class="nav-link" href="/about">about</a></li>
             <li class="nav-item"><a class="nav-link" href="/work">work</a></li>
-            <li class="nav-item"><a class="nav-link" href="https://www.generationgirl.org/">generation girl</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.generationgirl.org/" target="_blank">generation girl</a></li>
         </ul>
     </nav>
     {% block body %}{% endblock %}

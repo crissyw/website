@@ -24,7 +24,7 @@
             <div class="card-deck">
                 {% for key, value in work_content.items() %}
                 <div class="card shadow-sm mb-3" style="min-width: 12rem;">
-                    <a href='{{value['url']}}' class="stretched-link">
+                    <a href='{{value['url']}}' target="_blank" class="stretched-link">
                         <div class="embed-responsive embed-responsive-16by9">
                         <img class="card-img-top embed-responsive-item p-2" src={{value['file_path']}} alt="Card image cap">
                     </a>
