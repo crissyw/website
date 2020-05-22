@@ -45,6 +45,8 @@ def work():
 		'Globe Asia: A Passion for Big Data': {'url': 'https://www.globeasia.com/cover-story/a-passion-for-big-data/', 'file_path':'/static/images/portfolio/globeasia.jpg'},
 		'Gojek x Data Science Weekend': {'url': 'https://www.youtube.com/watch?v=mEzHlzPeFSw', 'file_path':'/static/images/portfolio/gojek-dsw.jpg'},
 		'GoFigure: Gojek\'s Growth Dilemma': {'url': 'https://www.youtube.com/watch?v=YyNrgZSYY9c', 'file_path':'/static/images/portfolio/gofigure-podcast.jpg'},
+		'Techsauce 2019: How Unicorns Use Data': {'url': 'https://www.facebook.com/ritu.marya/videos/10158319083299237/', 'file_path':'/static/images/portfolio/techsauce-entrepreneur.png'},
+		'Mencari Cara Kerja Lebih Pintar': {'url': 'https://mediaindonesia.com/read/detail/277888-mencari-cara-kerja-lebih-pintar.html', 'file_path':'/static/images/portfolio/crystal-widjaja-mencari-cara-media-indonesia.jpg'},
 		'BukaTalks: Big Data?': {'url': 'https://www.youtube.com/watch?v=3grep1OVyeg','file_path':'/static/images/portfolio/bukatalks.jpg'},
 		'North Star Metrics': {'url': 'https://www.youtube.com/watch?v=WOcxmEWqI0c', 'file_path':'/static/images/portfolio/nsm.jpg'},
 		'KrAsia: Women In Tech': {'url': 'https://kr-asia.com/crystal-widjaja-on-gojeks-growth-and-gender-diversity-in-it-women-in-tech', 'file_path':'/static/images/portfolio/krasia.jpeg'},

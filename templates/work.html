@@ -20,13 +20,13 @@
 <section class="work">
     <div class="container">
         <div class="col-md-9 mt-12">
-            <p class="lead work-title my-3 text-align-left">features, publications, & talks</p>
+            <h5 class="lead work-title my-3 text-align-left">features, publications, & talks</h5>
             <div class="card-deck">
                 {% for key, value in work_content.items() %}
                 <div class="card shadow-sm mb-3" style="min-width: 12rem;">
                     <a href='{{value['url']}}' target="_blank" class="stretched-link">
                         <div class="embed-responsive embed-responsive-16by9">
-                        <img class="card-img-top embed-responsive-item p-2" src={{value['file_path']}} alt="Card image cap">
+                        <img class="card-img-top embed-responsive-item p-2" src={{value['file_path']}} alt="Crystal Widjaja featured">
                     </a>
                 </div>
                     <div class="card-body text-center text-uppercase text-muted small d-flex align-items-center justify-content-center py-1">{{ key|e }}</div>
