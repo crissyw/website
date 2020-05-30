@@ -57,6 +57,10 @@ def work():
 		}
 	return render_template('work.html', work_content=work_content)
 
+@app.route('/actualtest')
+def actualtest():
+	return render_template('index.html')
+
 @app.route('/test')
 def test():
 	if request.method == 'POST':
