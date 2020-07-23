@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block head %}
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!-- Not sure I'll need Popper but here for now -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+<!-- Need to figure out the url_fors -->
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename = 'css/home.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/home.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<section class="reading-list">
+    <div class="container">
+        <div class="row align-items-center h-100">  
+            <div class="col-md-6 mt-5">
+                <div class="row">
+                    <h1 class="about-me-title font-weight-bold mt-4">how do i...</h1>
+                </div>
+                <div class="row">
+                    <h3 class="font-weight-bold mt-5">...become a better leader?</h3>
+                </div>
+                {% for key, value in management.items() %}
+                <div class="row align-items-center text-center">
+                    <div class="col d-flex align-items-center justify-content-center">
+                        <a href="{{value['url']}}" target="_blank" class="h4 mt-4">{{ key|e }}
+                        <img src={{value['file_path']}} class="img-fluid w-50 rounded mx-auto d-block" alt="..."></a>
+                    </div>
+                </div>
+                {% endfor %}
+
+                <div class="row  mt-5">
+                    <h3 class="font-weight-bold mt-4">...build an enduring company?</h3>
+                </div>
+                {% for key, value in enduring_company.items() %}
+                <div class="row align-items-center text-center">
+                    <div class="col d-flex align-items-center justify-content-center">
+                        <a href="{{value['url']}}" target="_blank" class="h4 mt-4">{{ key|e }}
+                        <img src={{value['file_path']}} class="img-fluid w-50 rounded mx-auto d-block" alt="..."></a>
+                    </div>
+                </div>
+                {% endfor %}
+
+                <div class="row  mt-5">
+                    <h3 class="font-weight-bold">...communicate with my users?</h3>
+                </div>
+                {% for key, value in user_empathy.items() %}
+                <div class="row align-items-center text-center">
+                    <div class="col d-flex align-items-center justify-content-center">
+                        <a href="{{value['url']}}" target="_blank" class="h4 mt-4">{{ key|e }}
+                        <img src={{value['file_path']}} class="img-fluid w-50 rounded mx-auto d-block" alt="..."></a>
+                    </div>
+                </div>
+                {% endfor %}
+
+                <div class="row  mt-5">
+                    <h3 class="font-weight-bold mt-5">...become data literate?</h3>
+                </div>
+                {% for key, value in data_literate.items() %}
+                <div class="row align-items-center text-center">
+                    <div class="col d-flex align-items-center justify-content-center">
+                        <a href="{{value['url']}}" target="_blank" class="h4 mt-4">{{ key|e }}
+                        <img src={{value['file_path']}} class="img-fluid w-50 rounded mx-auto d-block" alt="..."></a>
+                    </div>
+                </div>
+                {% endfor %}
+
+                <div class="row  mt-5">
+                    <h3 class="font-weight-bold mt-5">...understand code?</h3>
+                </div>
+                {% for key, value in code_literate.items() %}
+                <div class="row align-items-center text-center">
+                    <div class="col d-flex align-items-center justify-content-center">
+                        <a href="{{value['url']}}" target="_blank" class="h4 mt-4">{{ key|e }}
+                        <img src={{value['file_path']}} class="img-fluid w-50 rounded mx-auto d-block" alt="..."></a>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
