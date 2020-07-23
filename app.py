@@ -49,7 +49,9 @@ def readingList():
 	code_literate = {
 		'Bitcoin and Cryptocurrency Technologies (stop at W5) — Princeton University': {'url': 'https://www.coursera.org/learn/cryptocurrency/home/welcome', 'file_path':'static/images/reading-list/coursera-social-logo.png'},
 		'Dank Learning: Generating Memes Using Deep Neural Networks': {'url': 'https://arxiv.org/pdf/1806.04510.pdf', 'file_path':'https://github.com/alpv95/MemeProject/blob/master/Picture1.png?raw=true'},
-		'Introduction to Probability and Statistics — MIT': {'url': 'https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics-spring-2014/class-slides/', 'file_path':'static/images/reading-list/mit.png'}
+		'Real Programmers Don\'t Use PASCAL': {'url': 'https://www.ee.ryerson.ca/~elf/hack/realmen.html', 'file_path':'static/images/reading-list/pascal.png'},
+		'What is code? — Paul Ford': {'url': 'https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/', 'file_path':'static/images/reading-list/whatiscode.png'},
+		'Learn SQL on W3 Schools': {'url': 'https://www.w3schools.com/sql/', 'file_path':'static/images/logo.png'}
 	}
 
 	return render_template('reading_list.html',management=management,user_empathy=user_empathy,enduring_company=enduring_company,data_literate=data_literate,code_literate=code_literate)
