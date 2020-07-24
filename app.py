@@ -12,9 +12,9 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 def index():
 	return render_template('home.html')
 
-@app.route('/about')
+@app.route('/about-crystal-widjaja')
 def about():
-	return render_template('about.html')
+	return render_template('about-crystal-widjaja.html')
 
 @app.route('/reading_list')
 def readingList():
@@ -36,7 +36,8 @@ def readingList():
 	user_empathy = {
 		'The Creative Curve — Allen Gannett': {'url': 'https://amzn.to/2EairzS', 'file_path':'static/images/reading-list/thecreativecurve.jpg'},
 		'The Everything Store: Jeff Bezos and the Age of Amazon — Brad Stone': {'url': 'https://amzn.to/2CVoDen', 'file_path':'static/images/reading-list/theeverythingstore.jpg'},
-		'Made to Stick: Why Some Ideas Survive and Others Die — Chip Heath & Dan Heath': {'url': 'https://amzn.to/2CCUwZp', 'file_path':'static/images/reading-list/madetostick.jpg'}
+		'Made to Stick: Why Some Ideas Survive and Others Die — Chip Heath & Dan Heath': {'url': 'https://amzn.to/2CCUwZp', 'file_path':'static/images/reading-list/madetostick.jpg'},
+		'Hacking Growth: How Today\'s Fastest-Growing Companies Drive Breakout Success — Sean Ellis & Morgan Brown': {'url': 'https://amzn.to/2BwySFM', 'file_path':'static/images/reading-list/hackinggrowth.jpg'}
 	}
 
 	data_literate = {
@@ -64,6 +65,8 @@ def work():
 		'TITLE': {'url': 'LINK', 'file_path':'/static/images/portfolio/IMG.JPG'}
 	"""
 	work_content = {
+		'Future of Startup: The Prophecy of Crystal Widjaja — Nyaman Di Sosmed': {'url': 'https://open.spotify.com/episode/50cnuRUtvAbfCLzKSt6PkJ', 'file_path':'/static/images/portfolio/nyamandisosmed.png'},
+		'Crystal Widjaja: Empowering Women and Underrepresented Groups in Tech — Ngobrolin Startup & Teknologi': {'url': 'https://open.spotify.com/episode/6B2V8KEklV7JuhS6h9ta7p?si=clt7NkadRfezGvzBWdZVWA', 'file_path':'/static/images/portfolio/empoweringwomen.jpeg'},
 		'How to Experiment with Product Improvements - Tech in Asia Singapore': {
 			'url': 'https://www.youtube.com/watch?v=WRUSryfaxhk',
 			'file_path':'/static/images/portfolio/youtube-tia-sg-2018.jpg'},
