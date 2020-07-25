@@ -14,23 +14,6 @@
 <!-- Need to figure out the url_fors -->
 <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename = 'css/home.css') }}">
 <script type="text/javascript" src="{{ url_for('static', filename = 'js/home.js') }}"></script>
-
-<script>
-    /**
-    * Function that registers a click on an outbound link in Analytics.
-    * This function takes a valid URL string as an argument, and uses that URL string
-    * as the event label. Setting the transport method to 'beacon' lets the hit be sent
-    * using 'navigator.sendBeacon' in browser that support it.
-    */
-    var getOutboundLink = function(url) {
-      gtag('event', 'click', {
-        'event_category': 'outbound',
-        'event_label': url,
-        'transport_type': 'beacon',
-        'event_callback': function(){document.location = url;}
-      });
-    }
-    </script>
     
 {% endblock %}
 
@@ -51,7 +34,7 @@
                     class="text-muted">Sequoia's Scout fund</a>, and help other startups and companies with growth, data, and product.
                 <br><br>
                 <h4>Get in touch:</h4>
-                If you'd like to spend an hour to talk through your company's Growth / Data challenges, book a slot <a href="https://calendly.com/consultcrystalwidjaja/60min" onclick="getOutboundLink('https://calendly.com/consultcrystalwidjaja/60min'); return false;">here</a>. Otherwise, if you have an exciting project / idea / role to share, free to send me an <a href="mailto:crystal@crystalwidjaja.com"  target="_blank">email</a> :)
+                If you'd like to spend an hour to talk through your company's Growth / Data challenges, book a slot <a href="https://calendly.com/consultcrystalwidjaja/60min?month=2020-07" onclick="getOutboundLink('https://calendly.com/consultcrystalwidjaja/60min?month=2020-07'); return !gtagLoaded;">here</a>! Otherwise, if you have an exciting project / idea / role to share, free to send me an <a href="mailto:crystal@crystalwidjaja.com"  target="_blank">email</a> :)
             </p>
             <div class="row justify-content-between">
                 <!-- item 1 -->
