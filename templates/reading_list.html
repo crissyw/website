@@ -4,8 +4,6 @@
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<!-- Not sure I'll need Popper but here for now -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 
 <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -22,70 +20,90 @@
         <div class="row align-items-center h-100">  
             <div class="col-md-8 mt-5">
                 <div class="row mx-auto">
-                    <h1 class="about-me-title font-weight-bold mt-4">Crystal Widjaja's Reading List</h1>
-                    <lead>I'm often asked about what I'm reading or learning about—either because they want to switch careers into data science or learn about product-led growth. I've made a very short list below of what I consider to be the "must-reads" for each category, selected by how often I reference them or how much they changed the way I think.<br><br>
+                    <h1 class="about-me-title font-weight-bolder mt-4 text-center">Crystal Widjaja's Reading List</h1>
+                    <lead>I'm often asked about what I'm reading or learning about — either because someone wants to switch careers into data science or learn about product-led growth. I've made a very short list below of what I consider to be the "must-reads" for each category, selected by how often I reference them or how much they changed the way I think.<br><br>
                     Read more about me <a href="/about-crystal-widjaja" target="_blank" rel="noopener" class="text-muted">here.</a></lead>
                 </div>
+                <hr/>
                 <div class="row mx-auto">
-                    <h3 class="font-weight-bold mt-5">How do I become a better leader?</h3>
+                    <h2 class="mt-2">How do I become a better leader?</h2>
                 </div>
                 {% for key, value in management.items() %}
-                <div class="row align-items-center text-center">
-                    <div class="col d-flex align-items-center justify-content-center">
-                        <a href="{{value['url']}}" target="_blank" class="h4 mt-4">{{ key|e }}
-                        <img src={{value['file_path']}} class="img-fluid w-25 rounded mx-auto d-block" alt="..."></a>
-                    </div>
+                <div class="md-col-8 md-offset-2 mt-3">
+                    <ul class="list-unstyled text-center">
+                        <a href="{{value['url']}}" target="_blank" class="li h4 font-weight-light mx-auto">{{ key|e }}
+                            <img src="{{value['file_path']}}" class="img-fluid w-50 rounded mx-auto d-block figure-img z-depth-1" alt="...">
+                        </a>
+                        <li class="h6 text-left"><b>My Take</b>: {{value['book_summary']}}</li>
+                        <br>
+                        <hr/>
+                        <br>
+                    </ul>
                 </div>
                 {% endfor %}
 
-                <div class="row  mx-auto mt-5">
-                    <h3 class="font-weight-bold mt-4"> How do I build an enduring company?</h3>
+                <div class="row  mx-auto mt-2">
+                    <h2 class="mt-2"> How do I build an enduring company?</h2>
                 </div>
                 {% for key, value in enduring_company.items() %}
-                <div class="row align-items-center text-center">
-                    <div class="col d-flex align-items-center justify-content-center">
-                        <a href="{{value['url']}}" target="_blank" class="h4 mt-4">{{ key|e }}
-                        <img src={{value['file_path']}} class="img-fluid w-25 rounded mx-auto d-block" alt="..."></a>
-                    </div>
+                <div class="md-col-8 md-offset-2 mt-3">
+                    <ul class="list-unstyled text-center">
+                        <a href="{{value['url']}}" target="_blank" class="li h4 font-weight-light mx-auto">{{ key|e }}
+                            <img src="{{value['file_path']}}" class="img-fluid w-50 rounded mx-auto d-block figure-img z-depth-1" alt="...">
+                        </a>
+                        <li class="h6 text-left"><b>My Take</b>: {{value['book_summary']}}</li>
+                        <br><hr/>
+                        <br>
+                    </ul>
                 </div>
                 {% endfor %}
 
-                <div class="row  mx-auto mt-5">
-                    <h3 class="font-weight-bold">How do I communicate with my users?</h3>
+                <div class="row  mx-auto mt-3">
+                    <h2 class="mt-2">How do I communicate with my users?</h2>
                 </div>
                 {% for key, value in user_empathy.items() %}
-                <div class="row align-items-center text-center">
-                    <div class="col d-flex align-items-center justify-content-center">
-                        <a href="{{value['url']}}" target="_blank" class="h4 mt-4">{{ key|e }}
-                        <img src={{value['file_path']}} class="img-fluid w-25 rounded mx-auto d-block" alt="..."></a>
-                    </div>
+                <div class="md-col-8 md-offset-2 mt-3">
+                    <ul class="list-unstyled text-center">
+                        <a href="{{value['url']}}" target="_blank" class="li h4 font-weight-light mx-auto">{{ key|e }}
+                            <img src="{{value['file_path']}}" class="img-fluid w-50 rounded mx-auto d-block figure-img z-depth-1" alt="...">
+                        </a>
+                        <li class="h6 text-left"><b>My Take</b>: {{value['book_summary']}}</li>
+                        <br><hr/>
+                        <br>
+                    </ul>
                 </div>
                 {% endfor %}
 
-                <div class="row  mx-auto mt-5">
-                    <h3 class="font-weight-bold mt-5">How do I become data literate?</h3>
+                <div class="row  mx-auto mt-3">
+                    <h2 class="mt-2">How do I become data literate?</h2>
                 </div>
                 {% for key, value in data_literate.items() %}
-                <div class="row align-items-center text-center">
-                    <div class="col d-flex align-items-center justify-content-center">
-                        <a href="{{value['url']}}" target="_blank" class="h4 mt-4">{{ key|e }}
-                        <img src={{value['file_path']}} class="img-fluid w-25 rounded mx-auto d-block" alt="..."></a>
-                    </div>
+                <div class="md-col-8 md-offset-2 mt-3">
+                    <ul class="list-unstyled text-center">
+                        <a href="{{value['url']}}" target="_blank" class="li h4 font-weight-light mx-auto">{{ key|e }}
+                            <img src="{{value['file_path']}}" class="img-fluid w-50 rounded mx-auto d-block figure-img z-depth-1" alt="...">
+                        </a>
+                        <li class="h6 text-left"><b>My Take</b>: {{value['book_summary']}}</li>
+                        <br><hr/>
+                        <br>
+                    </ul>
                 </div>
                 {% endfor %}
 
-                <div class="row  mx-auto mt-5">
-                    <h3 class="font-weight-bold mt-5">How do I learn and understand code?</h3>
+                <div class="row  mx-auto mt-3">
+                    <h2 class="mt-2">How do I learn and understand code?</h2>
                 </div>
                 {% for key, value in code_literate.items() %}
-                <div class="row align-items-center text-center">
-                    <div class="col d-flex align-items-center justify-content-center">
-                        <a href="{{value['url']}}" target="_blank" class="h4 mt-4">{{ key|e }}
-                        <img src={{value['file_path']}} class="img-fluid w-25 rounded mx-auto d-block" alt="..."></a>
-                    </div>
+                <div class="md-col-8 md-offset-2 mt-3">
+                    <ul class="list-unstyled text-center">
+                        <a href="{{value['url']}}" target="_blank" class="li h4 font-weight-light mx-auto">{{ key|e }}
+                            <img src="{{value['file_path']}}" class="img-fluid w-50 rounded mx-auto d-block figure-img z-depth-1" alt="...">
+                        </a>
+                        <li class="h6 text-left"><b>My Take</b>: {{value['book_summary']}}</li>
+                    </ul>
                 </div>
                 {% endfor %}
-
+                <hr/>
             </div>
         </div>
     </div>
