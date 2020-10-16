@@ -17,6 +17,10 @@ def about():
 	return render_template('about-crystal-widjaja.html')
 
 @app.route('/reading_list')
+def readingListReroute():
+	return redirect("reading-list")
+
+@app.route('/reading-list')
 def readingList():
 	management = {
 		'Radical Candor — Kim Scott': {'url': 'https://amzn.to/3eObUr7', 'file_path':'static/images/reading-list/radicalcandor.jpg', 'book_summary':'This book really put into perspective my own management style, and helped me define and pick where along the spectrums of kindness and firmness I wanted to be. Great tips and scenarios to test yourself through!'},
@@ -55,7 +59,7 @@ def readingList():
 		'Learn SQL on W3 Schools': {'url': 'https://www.w3schools.com/sql/', 'file_path':'static/images/logo.png', 'book_summary':'My first interaction with code was through SQL. By knowing where data is coming from, how it is populated, and how it can be used, you will absolutely become a better programmer (or at least know how to talk to programmers).'}
 	}
 
-	return render_template('reading_list.html',management=management,user_empathy=user_empathy,enduring_company=enduring_company,data_literate=data_literate,code_literate=code_literate)
+	return render_template('reading-list.html',management=management,user_empathy=user_empathy,enduring_company=enduring_company,data_literate=data_literate,code_literate=code_literate)
 
 @app.route('/work')
 def work():
@@ -65,6 +69,7 @@ def work():
 		'TITLE': {'url': 'LINK', 'file_path':'/static/images/portfolio/IMG.JPG'}
 	"""
 	work_content = {
+		'Why Most Analytics Efforts Fail': {'url': 'https://www.reforge.com/blog/why-most-analytics-efforts-fail', 'file_path':'/static/images/portfolio/reforge.png'},
 		'Future of Startup: The Prophecy of Crystal Widjaja — Nyaman Di Sosmed': {'url': 'https://open.spotify.com/episode/50cnuRUtvAbfCLzKSt6PkJ', 'file_path':'/static/images/portfolio/nyamandisosmed.png'},
 		'Empowering Women and Underrepresented Groups in Tech — Ngobrolin Startup & Teknologi': {'url': 'https://open.spotify.com/episode/6B2V8KEklV7JuhS6h9ta7p?si=clt7NkadRfezGvzBWdZVWA', 'file_path':'/static/images/portfolio/empoweringwomen.jpeg'},
 		'How to Experiment with Product Improvements - Tech in Asia Singapore': {
