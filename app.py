@@ -61,38 +61,6 @@ def readingList():
 
 	return render_template('reading-list.html',management=management,user_empathy=user_empathy,enduring_company=enduring_company,data_literate=data_literate,code_literate=code_literate)
 
-@app.route('/work')
-def work():
-	"""
-	Images of YouTube videos: https://img.youtube.com/vi/<insert-youtube-video-id-here>/0.jpg
-	Template for dict:
-		'TITLE': {'url': 'LINK', 'file_path':'/static/images/portfolio/IMG.JPG'}
-	"""
-	work_content = {
-		'Why Most Analytics Efforts Fail': {'url': 'https://www.reforge.com/blog/why-most-analytics-efforts-fail', 'file_path':'/static/images/portfolio/reforge.png'},
-		'Future of Startup: The Prophecy of Crystal Widjaja — Nyaman Di Sosmed': {'url': 'https://open.spotify.com/episode/50cnuRUtvAbfCLzKSt6PkJ', 'file_path':'/static/images/portfolio/nyamandisosmed.png'},
-		'Empowering Women and Underrepresented Groups in Tech — Ngobrolin Startup & Teknologi': {'url': 'https://open.spotify.com/episode/6B2V8KEklV7JuhS6h9ta7p?si=clt7NkadRfezGvzBWdZVWA', 'file_path':'/static/images/portfolio/empoweringwomen.jpeg'},
-		'How to Experiment with Product Improvements - Tech in Asia Singapore': {
-			'url': 'https://www.youtube.com/watch?v=WRUSryfaxhk',
-			'file_path':'/static/images/portfolio/youtube-tia-sg-2018.jpg'},
-		'Forbes Indonesia: 30 Under 30': {'url': 'https://www.instagram.com/p/BuTKjF0BSX6/', 'file_path':'/static/images/portfolio/forbes30under30.png'},
-		'General Electric: Women in STEM': {'url': 'https://www.ge.com/reports/56858-2/', 'file_path':'/static/images/portfolio/ge-womeninstem.png'},
-		'My Personal OKRs': {'url': 'https://medium.com/life-at-go-jek/personal-okrs-b10585010361', 'file_path':'/static/images/portfolio/medium-personal-okrs.jpeg'},
-		'Globe Asia: A Passion for Big Data': {'url': 'https://www.globeasia.com/cover-story/a-passion-for-big-data/', 'file_path':'/static/images/portfolio/globeasia.jpg'},
-		'Gojek x Data Science Weekend': {'url': 'https://www.youtube.com/watch?v=mEzHlzPeFSw', 'file_path':'/static/images/portfolio/gojek-dsw.jpg'},
-		'GoFigure: Gojek\'s Growth Dilemma': {'url': 'https://www.youtube.com/watch?v=YyNrgZSYY9c', 'file_path':'/static/images/portfolio/gofigure-podcast.jpg'},
-		'Techsauce 2019: How Unicorns Use Data': {'url': 'https://www.facebook.com/ritu.marya/videos/10158319083299237/', 'file_path':'/static/images/portfolio/techsauce-entrepreneur.png'},
-		'Mencari Cara Kerja Lebih Pintar': {'url': 'https://mediaindonesia.com/read/detail/277888-mencari-cara-kerja-lebih-pintar.html', 'file_path':'/static/images/portfolio/crystal-widjaja-mencari-cara-media-indonesia.jpg'},
-		'BukaTalks: Big Data?': {'url': 'https://www.youtube.com/watch?v=3grep1OVyeg','file_path':'/static/images/portfolio/bukatalks.jpg'},
-		'North Star Metrics': {'url': 'https://www.youtube.com/watch?v=WOcxmEWqI0c', 'file_path':'/static/images/portfolio/nsm.jpg'},
-		'KrAsia: Women In Tech': {'url': 'https://kr-asia.com/crystal-widjaja-on-gojeks-growth-and-gender-diversity-in-it-women-in-tech', 'file_path':'/static/images/portfolio/krasia.jpeg'},
-		'e27: Delivering 3M Martabaks in a Year - How Gojek Uses Data': {'url': 'https://e27.co/go-jek-uses-data-business-intelligence-20170905/', 'file_path':'/static/images/portfolio/e27.jpg'},
-		'Angin Spotlight': {'url': 'https://www.angin.id/2018/04/12/crystal-widjaja', 'file_path':'/static/images/portfolio/angin.jpg'},
-		'Metabase Case Study': {'url': 'https://www.metabase.com/case_studies/go-jek/', 'file_path':'/static/images/portfolio/metabase.png'},
-		'Go-Fast: The Data Behind Ramadan': {'url': 'https://blog.gojekengineering.com/go-fast-the-data-behind-ramadan-38037953561b', 'file_path':'/static/images/portfolio/gofast.jpeg'}
-		}
-	return render_template('work.html', work_content=work_content)
-
 @app.route('/actualtest')
 def actualtest():
 	return render_template('index.html')
