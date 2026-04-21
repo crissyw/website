@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Crystal Widjaja — Work, About, Features">
-    
+
     <!-- Using principles from addtoany.com -->
     <meta property="og:title" content="Crystal Widjaja">
     <meta property="og:image" content="https://www.crissyw.com/static/images/logo.png">
@@ -14,13 +14,13 @@
     <meta property="og:url" content="https://www.crissyw.com/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@crystalwidjaja"/>
-    <meta property=”og:type” content=”website”/>
+    <meta property="og:type" content="website"/>
 
 
     <title>Crystal Widjaja — Startup Helper</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="/static/css/base.css">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Catamaran|Roboto+Condensed" rel="stylesheet" type="text/css" />
 
@@ -60,7 +60,17 @@
     }
     </script>
 
-    {% block head %}{% endblock %}
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Not sure I'll need Popper but here for now -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="/static/css/home.css">
+    <script type="text/javascript" src="/static/js/home.js"></script>
 </head>
 <body>
     <nav class="nav navbar-expand-sm">
@@ -71,6 +81,32 @@
             <li class="nav-item"><a class="nav-link" href="https://www.generationgirl.org/" target="_blank">gen_g</a></li>
         </ul>
     </nav>
-    {% block body %}{% endblock %}
+
+<div class="container">
+    <div class="banner-text ml-5">
+        <h1 class="display-1 font-weight-bold font-italic">Crystal Widjaja</h1>
+        <!-- Loopy loopy through some adjectives I like... check the JS -->
+        <div id="about-me">
+            A passionate <span>startup builder</span>
+        </div>
+        <div class="social-icons d-flex mt-3">
+            <a target="_blank" href="https://github.com/crissyw">
+                <img class="icon-logo" src="/static/images/github.png">
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/crystalwidjaja/">
+                <img class="icon-logo" src="/static/images/linkedin.svg">
+            </a>
+            <a target="_blank" href="https://substack.com/@crystalwidjaja">
+                <img class="icon-logo" src="/static/images/substack.png">
+            </a>
+            <a target="_blank" href="https://twitter.com/crystalwidjaja">
+                <img class="icon-logo" src="/static/images/x.png">
+            </a>
+            <a target="_blank" href="https://instagram.com/crystal.widjaja/">
+                <img class="icon-logo" src="/static/images/ig.png">
+            </a>
+        </div>
+    </div>
+</div>
 </body>
 </html>

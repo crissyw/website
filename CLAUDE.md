@@ -4,37 +4,31 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Personal website for Crystal Widjaja (www.crissyw.com) — a Flask app serving static pages. Deployed via Heroku (Procfile with gunicorn). Domain managed through a CNAME file for GitHub Pages / custom domain.
+Personal website for Crystal Widjaja (www.crissyw.com) — plain static HTML served by GitHub Pages. Custom domain managed via the CNAME file.
 
 ## Development Commands
 
 ```bash
-# Setup
-python3 -m venv venv && source venv/bin/activate
-pip install -r requirements.txt
-
-# Run dev server (with debug mode)
-python app.py
-# Or:
-flask run
-# Available at http://127.0.0.1:5000
-
-# Production (what Heroku runs)
-gunicorn --bind 0.0.0.0:$PORT app:app
+# Local preview (no build step needed)
+python3 -m http.server
+# Available at http://localhost:8000
 ```
 
-There are no tests, linters, or build steps configured.
+There are no dependencies, build steps, tests, or linters.
 
 ## Architecture
 
-**Backend:** Single Flask app (`app.py`) with four routes:
-- `/` → `home.html` (landing page with rotating tagline animation)
-- `/about-crystal-widjaja` → about page
-- `/reading-list` → curated book list (data is defined inline in `app.py` as Python dicts, not in a database)
-- `/reading_list` → redirect to `/reading-list`
+**Pure static HTML** — no framework, no build tool. Each page is a self-contained HTML file with the shared head/nav inlined.
 
-**Templating:** Jinja2 templates in `templates/` extend `base.html`, which provides the nav bar, Google Analytics/GTM tracking, and OpenGraph meta tags. Each page template pulls in its own CSS/JS and Bootstrap 4.1 via CDN.
+**Pages:**
+- `/index.html` — home page (landing with jQuery rotating tagline)
+- `/about-crystal-widjaja/index.html` — about page
+- `/reading-list/index.html` — curated book list (22 entries, all hardcoded in HTML)
+- `/reading_list/index.html` — meta-refresh redirect to `/reading-list`
+- `/404.html` — custom GitHub Pages 404
 
-**Static assets:** `static/css/` for stylesheets, `static/js/home.js` for the jQuery-based tagline rotation on the home page, `static/images/` for logos and book cover images.
+**Static assets** live under `static/` (CSS, JS, images). All pages reference assets with absolute paths (`/static/...`).
 
-**Key detail:** Static asset caching is disabled (`SEND_FILE_MAX_AGE_DEFAULT = 0`) to force hard refreshes during development.
+**CDN dependencies:** Bootstrap 4.1, jQuery 3.4.1, Google Fonts (Lato, Catamaran, Roboto Condensed).
+
+**Analytics:** Google Tag Manager, Google Analytics (UA), Twitter pixel — all in the `<head>` of each page.

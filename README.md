@@ -1,46 +1,17 @@
 # Crystal Widjaja's Personal Website
 
-This is a simple Flask-based website.
+A static personal website served by GitHub Pages at [www.crissyw.com](https://www.crissyw.com).
 
-## Getting Started
+## Local Development
 
-### Prerequisites
-
-*   Python 3.8+
-*   pip
-
-### Installation
-
-1.  **Clone the repository:**
-
-    ```bash
-    git clone https://github.com/your-username/website.git
-    cd website
-    ```
-
-2.  **Create and activate a virtual environment:**
-
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate
-    ```
-
-3.  **Install the dependencies:**
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-### Running the Development Server
-
-To start the local development server, run:
+No dependencies required. To preview locally:
 
 ```bash
-flask run
+python3 -m http.server
 ```
 
-The application will be available at `http://127.0.0.1:5000`.
+Then open [http://localhost:8000](http://localhost:8000).
 
-### Building for Production
+## Deployment
 
-To generate a static version of the site, you can use a tool like `Frozen-Flask`.
+Pushes to `master` are automatically deployed via GitHub Pages.
