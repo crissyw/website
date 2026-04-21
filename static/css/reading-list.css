@@ -1,0 +1,126 @@
+.reading-list-container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+}
+
+.reading-list-header {
+    margin-bottom: 48px;
+}
+
+.reading-list-header h1 {
+    font-family: var(--font-display, "PolySans", sans-serif);
+    font-weight: var(--weight-slim, 200);
+    letter-spacing: var(--tracking-display, -0.020em);
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.reading-list-intro {
+    font-family: var(--font-body, "Inter", sans-serif);
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--color-text-secondary, #555);
+    max-width: 560px;
+}
+
+/* Section headings */
+.section-heading {
+    font-family: var(--font-display, "PolySans", sans-serif);
+    font-weight: var(--weight-neutral, 400);
+    letter-spacing: var(--tracking-heading, -0.014em);
+    font-size: 1.35rem;
+    margin: 48px 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.section-heading:first-of-type {
+    margin-top: 0;
+}
+
+/* Book cards — horizontal layout */
+.book-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.book-card:last-of-type {
+    border-bottom: none;
+}
+
+.book-link {
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.book-cover {
+    width: 72px;
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.book-cover:hover {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+    transform: translateY(-1px);
+}
+
+.book-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.book-title {
+    font-family: var(--font-display, "PolySans", sans-serif);
+    font-weight: var(--weight-median, 500);
+    font-size: 15px;
+    letter-spacing: var(--tracking-heading, -0.014em);
+    line-height: 1.35;
+    color: var(--color-text, #1a1a1a);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.book-title:hover {
+    text-decoration: underline;
+    text-decoration-color: rgba(26, 26, 26, 0.3);
+    text-underline-offset: 2px;
+    color: var(--color-text, #1a1a1a);
+}
+
+.book-summary {
+    font-family: var(--font-body, "Inter", sans-serif);
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--color-text-secondary, #555);
+    margin: 0;
+}
+
+/* Responsive — stack on very small screens */
+@media (max-width: 480px) {
+    .reading-list-container {
+        padding: 32px 16px 64px;
+    }
+
+    .reading-list-header h1 {
+        font-size: 2.25rem;
+    }
+
+    .book-cover {
+        width: 56px;
+    }
+
+    .book-title {
+        font-size: 14px;
+    }
+
+    .book-summary {
+        font-size: 13px;
+    }
+}
