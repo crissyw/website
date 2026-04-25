@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Personal website for Crystal Widjaja (www.crissyw.com) — plain static HTML served by GitHub Pages. Custom domain managed via the CNAME file.
+Personal website for Crystal Widjaja (crystalwidjaja.com) — plain static HTML served by GitHub Pages. Custom domain managed via the CNAME file.
 
 ## Development Commands
 

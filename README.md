@@ -1,6 +1,6 @@
 # Crystal Widjaja's Personal Website
 
-A static personal website served by GitHub Pages at [www.crissyw.com](https://www.crissyw.com).
+A static personal website served by GitHub Pages at [crystalwidjaja.com](https://crystalwidjaja.com).
 
 ## Local Development
 
