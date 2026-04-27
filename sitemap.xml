@@ -5,16 +5,19 @@
                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<url>
 		<loc>https://crystalwidjaja.com/</loc>
+		<lastmod>2026-04-27</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
-		<loc>https://crystalwidjaja.com/about-crystal-widjaja</loc>
+		<loc>https://crystalwidjaja.com/about-crystal-widjaja/</loc>
+		<lastmod>2026-04-27</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.58</priority>
 	</url>
 	<url>
-		<loc>https://crystalwidjaja.com/reading-list</loc>
+		<loc>https://crystalwidjaja.com/reading-list/</loc>
+		<lastmod>2026-04-27</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.58</priority>
 	</url>
