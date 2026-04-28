@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://crystalwidjaja.com/sitemap.xml
+Sitemap: https://crystalwidjaja.com/sitemap.txt
